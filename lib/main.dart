@@ -30,7 +30,7 @@ class _MainPageState extends State<MainPage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
           children: <Widget>[
-            TextFormField(
+            TextField(
                 decoration: InputDecoration(labelText: 'Bill'),
                 keyboardType: TextInputType.number,
                 onChanged: (text) {
@@ -38,8 +38,7 @@ class _MainPageState extends State<MainPage> {
                     _bill = int.parse(text);
                   });
                 }),
-            TextFormField(
-                initialValue: _tip.toString(),
+            TextField(
                 decoration: InputDecoration(labelText: 'Tip %'),
                 keyboardType: TextInputType.number,
                 onChanged: (text) {
